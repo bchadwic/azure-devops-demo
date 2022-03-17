@@ -9,6 +9,7 @@ trigger:
 pool: demo-pool
 
 steps:
+- script: ls -R /
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
