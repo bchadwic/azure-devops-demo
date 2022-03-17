@@ -9,7 +9,6 @@ trigger:
 pool: demo-pool
 
 steps:
-- script: ls -R /
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -21,3 +20,7 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
+- script: |
+      echo  '$(System.DefaultWorkingDirectory)'
+      ls
