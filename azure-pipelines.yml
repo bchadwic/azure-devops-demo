@@ -22,5 +22,7 @@ steps:
     sonarQubeRunAnalysis: false
 
 - script: chmod +x mvnw && ./mvnw spring-boot:run &
+  displayName: Run Spring Boot Application
 
-- script: echo Calling LocalHost && curl http://localhost:8080/actuator/health
+- script: curl http://localhost:8080/actuator/health
+  displayName: Call the Service
