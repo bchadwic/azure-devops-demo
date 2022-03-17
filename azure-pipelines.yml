@@ -21,6 +21,8 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- script: chmod +x mvnw && ./mvnw spring-boot:run
+- script: chmod +x mvnw && ./mvnw spring-boot:run &
+
+- script: sleep 10
 
 - script: curl localhost:8080/actuator/health
