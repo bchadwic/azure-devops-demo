@@ -25,4 +25,6 @@ steps:
 
 - script: sleep 10
 
-- script: curl localhost:8080/actuator/health
+- task: CmdLine@2
+  inputs:
+    script: 'curl localhost:9090/actuator/health'
